@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <title>Document</title>
+   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+   <div class="main">
+      <div class="account">
+         <a class="account-link" href="#"><img class="account-img" src="{% static 'images/account.png' %}" alt=""></a>
+      </div>
+      <div class="language">
+         <button class="langbtn"><img class="lang-img" src="{% static 'images/ramka-removebg-preview.png' %}" alt=""></button>
+         <div class="language-content">
+            <a href="#"><img class="lang-item" src="{% static 'images/ru-removebg-preview.png' %}" alt=""></a>
+            <a href="#"><img class="lang-item" src="{% static 'images/uz-removebg-preview.png' %}" alt=""></a>
+            <a href="#"><img class="lang-item" src="{% static 'images/en-removebg-preview.png' %}" alt=""></a>
+         </div>
+      </div>
+      <div class="cart">
+         <a href="#" class="cart-link"><img class="cart-img" src="{% static 'images/korzinka.png' %}" alt=""></a>
+      </div>
+   </div>
+   <img class="main-gif" src="{% static 'GIF_15.gif' %}" alt="">
+   <div class="container">
+      <div class="links">
+         <div class="links-left">
+            <a href="#"><img src="{% static 'images/01.png' %}" alt=""></a>
+            <a href="#"><img src="{% static 'images/02.png' %}" alt=""></a>
+            <a href="#"><img src="{% static 'images/03.png' %}" alt=""></a>
+            <a href="{% url 'shop' %}"><img src="{% static 'images/04.png' %}" alt=""></a>
+         </div>
+         <div class="links-right">
+            <a href="#"><img src="{% static 'images/05.png' %}" alt=""></a>
+            <a href="#"><img src="{% static 'images/06.png' %}" alt=""></a>
+            <a href="#"><img src="{% static 'images/07.png' %}" alt=""></a>
+            <a href="#"><img src="{% static 'images/08.png' %}" alt=""></a>
+         </div>
+      </div>
+
+      <div class="news-section container">
+         <ul class="news-list">
+            <li class="news-item">
+               <img src="{% static 'images/photo_2023-04-06_12-02-16.jpg' %}" alt="">
+               <div class="news-link">
+                  <a href="#"><i class="fa-solid fa-link"></i></a>
+               </div>
+            </li>
+            <li class="news-item">
+               <img src="{% static 'images/photo_2023-04-06_12-00-48.jpg' %}" alt="">
+               <div class="news-link">
+                  <a href="#"><i class="fa-solid fa-link"></i></a>
+               </div>
+            </li>
+         </ul>
+      </div>
+   </div>
+   <script src="{% static 'javascript/app.js' %}"></script>
+</body>
+
+</html>

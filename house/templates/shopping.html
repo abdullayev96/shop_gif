@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+<!---
+{% for c in cats %}
+		.....
+		{% for post in c.posts %}
+			<div class="post" >....</div>
+		{%  endfor %}
+{% endfor %}
+---->
+
+
+{% block content %}
+   <div class="container">
+      <div class="shop-body">
+       <div class="shop-categories">
+            <img src="{% static 'images/png5.png' %}" alt="">
+            <ul >
+               {% for p in posts %}
+               <li>
+                     {% if p.photo %}
+                        <img class="post-img" src="{{p.photo.url}}"  width="400">
+                     {% endif %}
+                     <h3 class="post-title">{{p.title}}</h3>
+                     <p>{{p.description}}</p>
+                     <p>{{p.price}} sum</p>
+               </li>
+               {% endfor %}
+
+            </ul>
+         </div>
+         <div class="shop-categories">
+            <img src="{% static 'images/png3.png' %}" alt="">
+            <ul >
+            </ul>
+         </div>
+         <div class="shop-categories">
+            <img src="{% static 'images/png2.png' %}" alt="">
+            <ul >
+            </ul>
+         </div>
+         <div class="shop-categories">
+            <img src="{% static 'images/png1.png' %}" alt="">
+            <ul >
+            </ul>
+         </div>
+      </div>
+   </div>
+{% endblock content %}
+
+
+

@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<ul class="list-articles">
+   {% for p in posts %}
+   <li>
+
+   {% if p.photo %}
+       <img class="post-img" src="{{p.photo.url}}">
+   {% endif %}
+   <h5 class="post-title">{{p.title}}</h5>
+   <p>{{p.description}}</p>
+    <p>{{p.price}} sum</p>
+<!---
+   <h6 class="post-item"><span>DESCRIPTION: </span> {{p.description}}</h6>
+   <h6 class="post-item"><span>PRICE: </span> {{p.price}} sum</h6>
+
+--->
+</li>
+   {% endfor %}
+</ul>
+
+
+{% endblock content  %}
+
+
+<!------
+
+
+<ul class="list-articles">
+   {% for p in posts %}
+   <li>
+
+      <div class="article-panel">
+         <p class="first">Category:{{p.cat}}</p>
+         <p class="last">Data:{{p.create_at| date:"d-m-Y H:i:s"}}</p>
+      </div>
+
+      {% if p.photo %}
+      <img class="img-article-left " src="{{ p.photo.url }}">
+      {% endif %}
+
+      <h5 class="title">{{p.title}}</h5>
+      <h6 class="subtitle">{{p.description}}</h6>
+       <h6 class="subtitle">{{p.price}}sum</h6>
+
+      {% autoescape on %}
+      {{p.content|linebreaks|truncatewords:50}}
+      {% endautoescape %}
+
+      <p class="link-read-post"><a href="{{ p.get_absolute_url  }}">Read post</a></p>
+
+   </li>
+   {% endfor %}
+</ul>
+
+
+
